@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">this is heading</h1>
+    <button id ="Red">Red</button>
+    <button id="blue">blue</button>
+    
+    <script>
+        //  butt=()=>{
+        //     document.querySelector('#h1').classList.add('red');
+        // }
+        // butt1=()=>{
+        //     document.querySelector('#h1').classList.add('blue');
+        // }
+
+        var classH1 = document.querySelector("#h1").classList;
+        butt=()=>{
+            classH1.add('red');
+            classH1.remove('blue');
+        }
+        butt1=()=>{
+            classH1.add('blue');
+            classH1.remove('red');
+        }
+        document.querySelector('#Red').addEventListener('click',butt)
+        document.querySelector('#blue').addEventListener('click',butt1)
+        // function butt(){
+        //     document.querySelector('#h1')         
+        // }
+    </script>
+</body>
+</html>
