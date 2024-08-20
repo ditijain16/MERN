@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Fancy Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="assets/logo1.png" alt="CodersZone" style="height: 40px;"> 
+            <span class="company-name">CodersZone</span>
+        </a>        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main class="main-content" >
+        <h2 style="margin-bottom: 4%;">Contact Us</h2>
+        <form action="#" id="show">
+            <input type="text" placeholder="Enter your name" required>
+            <input type="email" placeholder="Enter your email" required>
+            <textarea placeholder="Your message" id="text" style="height: 150px; width: 380px;" required></textarea>
+            <input type="submit"  value="Submit">
+        </form>
+    </main>
+    <script>
+        let array = [];
+        function responses(){
+                let val = document.getElementById('text').value;
+                array.push(val);
+                console.log('Message:', array);
+        }
+        document.getElementById('show').addEventListener('submit',responses);
+    </script>
+</body>
+</html>

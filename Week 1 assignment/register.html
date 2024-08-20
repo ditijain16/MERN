@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Fancy Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="assets/logo1.png" alt="CodersZone" style="height: 40px;"> 
+            <span class="company-name">CodersZone</span>
+        </a>        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h1 style="margin-bottom: 5%;">Register</h1>
+        <form action="#" style="margin-bottom: 3%;">
+            <input id= "email" type="email" placeholder="Enter your email" required>
+            <input id="pass" type="password" placeholder="Create password" required>
+            <input id="api" type="submit" value="Sign Up">
+        </form>
+        <p>Already have an account? <a href="login.html" id="login-link"style="color: #ffc24d;">Login Now</a></p>
+    </main>
+    <script>
+        async function postApi() {
+            let input1 = document.getElementById('email').value;
+            let input2 = document.getElementById('pass').value;
+            let data = {
+                "email;": input1,
+                "password": input2
+            };
+
+            const a = await fetch('https://reqres.in/api/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data) 
+            });
+
+            let json = await a.json(); 
+            console.log(json); 
+        } 
+
+        document.getElementById('api').addEventListener('click', postApi);
+    </script>
+</body>
+<script src="script.js"></script>
+</html>
