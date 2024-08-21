@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Fancy Website</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -22,12 +22,37 @@
     <main class="main-content">
         <h1 style="margin-bottom: 5%;">Login</h1>
         <form action="#" style="margin-bottom: 2%;">
-            <input type="email" placeholder="Enter your email" required>
-            <input type="password" placeholder="Enter your password" required>
-            <input type="submit" value="Login">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="password" id="pass" placeholder="Enter your password" required>
+            <input type="submit" id="api" value="Login">
         </form>
         <p>Don't have an account? <a href="register.html" id="signup-link" style="color: #ffc24d;">Register Now</a></p>
     </main>
+    <script>
+        async function login() {
+            let data = {
+                email: document.getElementById("email").value,
+                password: document.getElementById("pass").value,
+            };
+            const a = await fetch('https://reqres.in/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data) 
+            });
+
+            let json = await a.json(); 
+            console.log(json); 
+            if (json["token"]) {  
+                alert("Registration successful!");  
+            } else {
+                alert("Registration failed!"); 
+            }
+        } 
+
+        document.getElementById('api').addEventListener('click', login);
+    </script>
+
 </body>
-<script src="script.js"></script>
 </html>

@@ -6,14 +6,14 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #35356e, #cce6ff); /* Dark blue to light blue gradient */
-    color: #ffc24d; /* Accent color for text */
+    background: linear-gradient(135deg, #35356e, #cce6ff); 
+    color: #ffc24d; 
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 100px; /* Offset for fixed header */
+    padding-top: 100px; 
 }
 
 header {
@@ -38,7 +38,7 @@ header .logo {
 }
 
 header .logo img {
-    margin-right: 10px; /* Space between logo and text */
+    margin-right: 10px; 
 }
 
 header nav a {
@@ -49,7 +49,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #ffc24d; /* Hover color */
+    color: #ffc24d;
 }
 
 header .login-btn {
@@ -63,26 +63,26 @@ header .login-btn {
 }
 
 header .login-btn:hover {
-    background-color: #cce6ff; /* Hover color */
+    background-color: #cce6ff; 
     color: #35356e;
 }
 
-/* Main Content */
+
 .main-content {
-    background-color: #35356e; /* Solid dark blue background */
+    background-color: #35356e; 
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
     max-width: 500px;
     width: 100%;
-    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.1); /* Softer shadow */
-    color: #ffc24d; /* Yellow accent color for text */
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.1); 
+    color: #ffc24d; 
 }
 
 .main-content h1 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Very subtle shadow for title */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
 }
 
 .main-content p {
@@ -92,7 +92,7 @@ header .login-btn:hover {
 }
 
 .main-content .login-btn {
-    background-color: #ffc24d; /* Yellow button color */
+    background-color: #ffc24d; 
     color: #35356e;
     border: none;
     padding: 0.8rem 1.8rem;
@@ -103,7 +103,7 @@ header .login-btn:hover {
 }
 
 .main-content .login-btn:hover {
-    background-color: #e0a93b; /* Slightly darker yellow on hover */
+    background-color: #e0a93b; 
 }
 
 
@@ -112,27 +112,27 @@ input {
     padding: 1rem;
     margin: 0.8rem 0;
     border-radius: 30px;
-    border: 2px solid #ffc24d; /* Yellow border */
-    background-color: rgba(53, 53, 110, 0.8); /* Dark blue background with transparency */
-    color: #ffc24d; /* Yellow text color */
+    border: 2px solid #ffc24d; 
+    background-color: rgba(53, 53, 110, 0.8); 
+    color: #ffc24d; 
     text-align: center;
     font-size: 1rem;
 }
 
 input[type="submit"] {
-    background-color: #ffc24d; /* Yellow button */
+    background-color: #ffc24d; 
     border: none;
     cursor: pointer;
     padding: 1rem;
     font-weight: bold;
-    color: #35356e; /* Dark blue text */
+    color: #35356e; 
 }
 
 input[type="submit"]:hover {
-    background-color: #ffd966; /* Slightly lighter yellow on hover */
+    background-color: #ffd966; 
 }
 
-/* Specific Pages */
+
 .gallery img {
     width: 100%;
     border-radius: 15px;
@@ -155,5 +155,5 @@ footer {
     margin-top: 2rem;
     text-align: center;
     font-size: 0.9rem;
-    color: #ffc24d; /* Yellow text color */
+    color: #ffc24d; 
 }

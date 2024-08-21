@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register - Fancy Website</title>
+    <title>Register</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -29,15 +29,13 @@
         <p>Already have an account? <a href="login.html" id="login-link"style="color: #ffc24d;">Login Now</a></p>
     </main>
     <script>
-        async function postApi() {
-            let input1 = document.getElementById('email').value;
-            let input2 = document.getElementById('pass').value;
+        async function register() {
             let data = {
-                "email;": input1,
-                "password": input2
+                email: document.getElementById("email").value,
+                password: document.getElementById("pass").value,
             };
 
-            const a = await fetch('https://reqres.in/api/users', {
+            const a = await fetch('https://reqres.in/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -47,10 +45,14 @@
 
             let json = await a.json(); 
             console.log(json); 
+            if (json["token"]) {  
+                alert("Registration successful!");  
+            } else {
+                alert("Registration failed!"); 
+            }
         } 
 
-        document.getElementById('api').addEventListener('click', postApi);
+        document.getElementById('api').addEventListener('click', register);
     </script>
 </body>
-<script src="script.js"></script>
 </html>
