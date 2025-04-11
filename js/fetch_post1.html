@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Enter your name : <input type="text" id="input1"></div>
+    <div>Enter your job : <input type="text" id="input2"></div>
+    <button id="api">Post API</button>
+    <script>
+        async function postApi() {
+            let input1 = document.getElementById('input1').value;
+            let input2 = document.getElementById('input2').value;
+            let data = {
+                "name": input1,
+                "job": input2
+            };
+
+            const a = await fetch('https://reqres.in/api/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data) 
+            });
+
+            let json = await a.json(); 
+            console.log(json); 
+        } 
+
+        document.getElementById('api').addEventListener('click', postApi);
+    </script>
+</body>
+</html>

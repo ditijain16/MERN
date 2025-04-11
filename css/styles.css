@@ -1,0 +1,68 @@
+.div1 h1 {
+    background-color: lightblue; 
+    color: bisque;
+}
+
+h1 {
+    color: blueviolet;
+}
+
+.s2 h2 {
+    color: springgreen;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+}
+
+li {
+    padding: 2%;
+    list-style-type: none;
+}
+
+.active {
+    background-color: pink;
+}
+
+footer {
+    text-align: center;
+}
+
+.holder {
+    display: flex;
+    flex-direction: row;
+}
+
+.holder div {
+    height: 25vh;
+    width: 100%;
+    border: 1px solid burlywood;
+    text-align: center;
+}
+
+.holder div img {
+    height: 100%;
+}
+
+a:hover {
+    color: darkcyan;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: cornsilk;
+    }
+    
+    .menu {
+        display: none !important
+    }
+
+    .holder {
+        flex-direction: column;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+}

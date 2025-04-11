@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" required/>
+    <h1 id="one">
+        hi this is a heading
+    </h1>
+    <h2 id="two">
+        hi this is a heading 2
+    </h2>
+    <h3 id="three">
+        this will display input box message
+    </h3>
+    <button onclick="changeText()">
+        Change text
+    </button>
+    <script>
+        function changeText(){
+            document.getElementById("one").innerHTML = "this is from js";
+            document.getElementById("two").innerHTML = "this is from js";
+            let val = document.getElementById("input").value;
+             
+            if (val === "") {
+                document.getElementById("three").innerHTML = "Please enter a value";
+            } else {
+                console.log(val);
+                document.getElementById("three").innerHTML = val;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+hi this is diti, I am using this for testing GitHub.
+
+
+9th August
+
+create a new repository on GitHub
+
+git remote add origin https://github.com/ditijain16/project.git, this command is used if you don't have any repository in your system
+
+git push -u origin main, this command is used for when you have a repository and you want to create a repo in GitHub
+
+git init is used to scan the particular repo - pdf, word, etc
+
+git add filename or git add . | - will add all the files
+
+git commit -m "message"
+
+git branch -M main, this is used for when different people working on different branches, parts of the project
+
+Steps (execute separately):
+
+go to the folder you have a project in --> right click and choose Open with --> Git Bash here
+
+type ls and it will show all the files
+
+git init - it will initialize the repository
+
+git add . - it will add all the files in the repository
+
+git commit -m "initial comment" - this will add the message
+
+git remote add origin https://github.com/ditijain16/project.git - use this command to create a remote repo named origin, it will push the local repo to the link
+
+git push -u origin master - if you do this for the first time then it will ask for authentication, otherwise it will push the latest commits made to the local repo to the remote repo
+
+after this go to the link and check the committed files are available there
+
+create a new file and save it in the same folder
+
+in Git Bash give git status (the file with red color is not added)
+
+To add the new file:
+
+git add .
+
+git commit -m "file added"
+
+git push -u origin master
+
+
+

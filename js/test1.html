@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Layout</title>
+    <style>
+        body { 
+            font-family: Arial,sans-serif;
+            margin: 0; 
+            padding: 0; 
+        }
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 20px; 
+            background-color: white; 
+        }
+        header h1 { 
+            color: #00B3E6; 
+        }
+        nav ul { 
+            display: flex; 
+            list-style: none; 
+            margin: 0; 
+            padding: 0; 
+            gap: 20px; 
+        }
+        .hero { 
+            display: flex; 
+            align-items: center; 
+            background: #FFD700; 
+            padding: 20px; 
+            gap: 20px; 
+        }
+        .hero img { 
+            border: 10px solid white; 
+            border-radius: 10px; 
+        }
+        .features { 
+            display: flex; 
+            justify-content: space-around; 
+            padding: 20px; 
+        }
+        .feature-item { 
+            text-align: center; 
+            max-width: 200px; 
+        }
+        @media (max-width: 768px) {
+            .hero, 
+            .features { 
+                flex-direction: column; 
+                text-align: center;
+             }
+            .feature-item { 
+                margin-bottom: 20px; 
+            }
+        }
+        @media (max-width: 480px) {
+            header { 
+                flex-direction: column; 
+                text-align: center; 
+            }
+            nav ul { 
+                flex-direction: column; 
+                gap: 10px; 
+            }
+            .hero img { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MAGAZINE</h1>
+        <nav><ul><li>NEWS</li><li>ART</li><li>DESIGN</li><li>CULTURE</li></ul></nav>
+    </header>
+    <section class="hero">
+        <img src="image-placeholder.jpg" alt="Contemporary Art">
+        <div class="hero-text">
+            <h2>CONTEMPORARY ART</h2>
+            <p>Something about Contemporary art....</p>
+        </div>
+    </section>
+    <section class="features">
+        <div class="feature-item"><img src="#" alt="Pencil Icon"><p>Pen your thoughts</p></div>
+        <div class="feature-item"><img src="#" alt="Lightbulb Icon"><p>Thought provoking session</p></div>
+        <div class="feature-item"><img src="#" alt="Eye Icon"><p>View for yourself</p></div>
+    </section>
+</body>
+</html>

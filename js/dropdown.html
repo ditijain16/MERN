@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+    <p>Option selected: <span id="selectedOption">None</span></p>
+
+    <script>
+        document.getElementById('cars').addEventListener('change', (e) => {
+            // let val = document.getElementById('cars').value;
+            // document.getElementById('selectedOption').innerText = val;
+            console.log(e.target.value); //this locates the value selected
+            let tar = e.target.value;
+            document.getElementById('selectedOption').innerText = tar;
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+    <p>Option selected: <span id="selectedOption">None</span></p>
+
+    <script>
+        document.getElementById('cars').addEventListener('change', () => {
+            let val = document.getElementById('cars').value;
+            document.getElementById('selectedOption').innerText = val;
+            
+        });
+    </script>
+</body>
+</html> -->
+
+
